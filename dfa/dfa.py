@@ -13,7 +13,7 @@ class DFA:
 
 def main():
     num_states = int(input("Enter the number of states in the DFA: "))
-    transitions = {state: {'0': None, '1': None} for state in range(num_states)}
+    transitions = {state: {'0': 0, '1': 0} for state in range(num_states)}
 
     for state in transitions:
         transitions[state]['0'] = int(input(f"Enter state to transition to on '0' from state {state}: "))

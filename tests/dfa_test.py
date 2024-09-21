@@ -1,5 +1,6 @@
 from dfa import DFA  # Import the DFA class
 
+
 def run_tests():
     # Define a simple test DFA (no user input here)
     test_dfa = {
@@ -11,15 +12,16 @@ def run_tests():
     accepting_states = {0}
 
     # Create a DFA instance
-    dfa = DFA(num_states=len(test_dfa), transitions=test_dfa, initial_state=initial_state, accepting_states=accepting_states)
+    dfa = DFA(num_states=len(test_dfa), transitions=test_dfa, initial_state=initial_state,
+              accepting_states=accepting_states)
 
     # List of test cases: (input_string, expected_result)
     test_cases = [
         ('101', False),  # Ends in state 1, not accepting
-        ('010', False),   # Ends in state 0, accepting
+        ('010', False),  # Ends in state 0, accepting
         ('0011', True),  # Ends in state 0, accepting
         ('111', False),  # Ends in state 2, not accepting
-        ('', True)       # Empty string stays in initial state 0, accepting
+        ('', True)  # Empty string stays in initial state 0, accepting
     ]
 
     # Loop over test cases
